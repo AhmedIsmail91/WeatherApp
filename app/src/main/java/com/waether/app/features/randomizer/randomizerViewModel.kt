@@ -8,6 +8,8 @@ import com.example.usecases.numberIncrementer
 
 private const val DEFAULT_VALUE=0
 
+// initial value of number live data DEFUALT_VALUE
+//When i invoke increment number it incrtemented by 1
 class RandomizerViewModel : ViewModel()
 {
   // private val ticker = initializeTicker()
