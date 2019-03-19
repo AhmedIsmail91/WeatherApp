@@ -10,7 +10,6 @@ class Ticker(private val onTicking: () -> Unit) : CountDownTimer(FINISH_AFTER_MI
     override fun onTick(millisUntilFinished: Long) {
         onTicking()
     }
-
     override fun onFinish() {
     }
 }
