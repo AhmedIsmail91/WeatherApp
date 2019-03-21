@@ -15,11 +15,12 @@ class RandomizerActivity : FragmentActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_randomizer)
 
+
         val viewModel = ViewModelProviders.of(this).get(RandomizerViewModel::class.java)
         viewModel.numberLiveData.observe(this,
             Observer {random_number_textView.text = it.toString()})
-
         increment_button.setOnClickListener({viewModel.incrementNumber()})
+
     }
 }
 
