@@ -8,7 +8,9 @@ import com.example.usecases.database.weatherDatabase
 val citiesRepository by lazy { CitiesRepository() }
 
 class CitiesRepository(private val database: Lazy<WeatherDatabase> = lazy {weatherDatabase}) {
+
     fun searchCitiesByName(name: String): List<City> = database.value.citiesDao.queryCitiesbyName(name)
+
     fun retrieveFavouriteCitiesIds(): List<FavoriteCityId> = database.value.favouritesDao.queryAll()
 
     fun retrieveCitiesByIds(citiesIds: List<Long>) = database.value.citiesDao.queryCitiesbyIds(citiesIds)
